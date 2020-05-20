@@ -15,7 +15,7 @@
 //    return view('security.login');
 //});
 Route::get("/","SecurityController@login")->name('security.login');
-Route::post("login_process","SecurityController@signUpProcess")->name('security.login_process');
+Route::post("login_process","SecurityController@loginProcess")->name('security.login_process');
 
 Route::get("sign-up","SecurityController@signUp")->name('security.signup');
 Route::post("signup_process","SecurityController@signUpProcess")->name('security.signup_process');
@@ -24,7 +24,7 @@ Route::get("otp","SecurityController@otp")->name('security.otp');
 Route::post("otp_process","SecurityController@otp_process")->name('security.otp_process');
 
 Route::get("/{action}","SecurityController@setResetPassword")->name('security.setreset_password')->where('action','set-password|reset-password');
-
+Route::post("complete_signup_process","SecurityController@completeSignUpProcess")->name('security.complete_signup_process');
 
 Route::get("game/start","GameController@start")->name('game.start');
 

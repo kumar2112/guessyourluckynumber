@@ -7,7 +7,7 @@
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <!-- <span class="login100-form-title p-b-70">Welcome</span> -->
                     <span class="login100-form-avatar">
-                        <img src="{{url('assets/images/avatar-01.jpg')}}" alt="AVATAR">
+                        <img src="{{url('asset/images/avatar-01.jpg')}}" alt="AVATAR">
                     </span>
                     <div class="wrap-input100 validate-input m-t-85 m-b-35 @error('ln_mobileNumber') alert-validate @enderror" data-validate = "@error('ln_mobileNumber') {{$errors->first('ln_mobileNumber')}} @enderror">
                         <input value="{{old('ln_mobileNumber')}}" class="input100 @if(old('ln_mobileNumber')!='') has-val @endif" type="text" name="ln_mobileNumber" id="ln_mobileNumber" placeholder="" maxlength="13">

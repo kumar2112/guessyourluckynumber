@@ -1,10 +1,10 @@
 @extends('layouts.login_layout')
 @section('content')
-    
+
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-b-20">
-                <form class="login100-form validate-form" method="post" action="{{route('security.login_process')}}">
+                <form class="login100-form validate-form" method="post" action="{{route('security.complete_signup_process')}}">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <input type="hidden" name="txtHiddenMobileNumber" value="{{$data['mobileNumber']}}">
                     <input type="hidden" name="txtHiddenSignUpStage" value="{{$data['signUpStage']}}">
@@ -13,14 +13,13 @@
                     <span class="login100-form-avatar">
                         <img src="{{url('assets/images/avatar-01.jpg')}}" alt="AVATAR">
                     </span>
-                    <div class="wrap-input100 validate-input m-t-85 m-b-35 @error('ln_mobileNumber') alert-validate @enderror" data-validate = "@error('ln_mobileNumber') {{$errors->first('ln_mobileNumber')}} @enderror">
-                        <input value="{{old('ln_mobileNumber')}}" class="input100 @if(old('ln_mobileNumber')!='') has-val @endif" type="text" name="ln_mobileNumber" id="ln_mobileNumber" placeholder="" maxlength="13">
+                    <div class="wrap-input100 validate-input m-t-85 m-b-35 @error('ln_password') alert-validate @enderror" data-validate = "@error('ln_password') {{$errors->first('ln_password')}} @enderror">
+                        <input value="{{old('ln_password')}}" class="input100 @if(old('ln_password')!='') has-val @endif" type="password" name="ln_password" id="ln_password" placeholder="" maxlength="13">
 
                         <span class="focus-input100" data-placeholder="Password"></span>
                     </div>
-                    <div class="wrap-input100 validate-input m-b-35 @error('ln_mobileNumber') alert-validate @enderror" data-validate = "@error('ln_mobileNumber') {{$errors->first('ln_mobileNumber')}} @enderror">
-                        <input value="{{old('ln_mobileNumber')}}" class="input100 @if(old('ln_mobileNumber')!='') has-val @endif" type="text" name="ln_mobileNumber" id="ln_mobileNumber" placeholder="" maxlength="13">
-
+                    <div class="wrap-input100 validate-input m-b-35 @error('ln_confirmPassword') alert-validate @enderror" data-validate = "@error('ln_confirmPassword') {{$errors->first('ln_confirmPassword')}} @enderror">
+                        <input value="{{old('ln_confirmPassword')}}" class="input100 @if(old('ln_confirmPassword')!='') has-val @endif" type="password" name="ln_confirmPassword" id="ln_confirmPassword" placeholder="" maxlength="13">
                         <span class="focus-input100" data-placeholder="Confirm Password "></span>
                     </div>
 

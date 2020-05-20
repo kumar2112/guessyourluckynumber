@@ -3,7 +3,7 @@
 <div class='row'>
     <div class="col-md-12">
         <span class="login100-form-avatar">
-            <img src="{{url('assets/images/animated-dice.gif')}}" alt="AVATAR">
+            <img src="{{url('asset/images/animated-dice.gif')}}" alt="AVATAR">
         </span>
     </div>
 </div>
